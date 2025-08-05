@@ -1,0 +1,225 @@
+* {
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/*header*/
+header {
+  text-align: center
+}
+
+.img-container {
+  position: relative;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.center-text {
+  color: greenyellow;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/*Flex*/
+.cardcontainer {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  perspective: 1000px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cardinner {
+  background-color: blueviolet;
+  border-radius: 10px;
+  width: 350px;
+  height: 450px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card .cardinner:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front {
+  top: 50%;
+  left: 50%;
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(-180deg);
+}
+
+
+/* minigame */
+
+#ball {
+  background: blue;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  top: 1200px;
+  cursor: grab;
+  left: calc(50% - 40px);
+  z-index: 1;
+}
+
+#ball:active {
+  cursor: grabbing;
+}
+
+.Guide {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  top: 1200px;
+  position: absolute;
+  left: calc(50% - 5px);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pin {
+  background: white;
+  width: 30px;
+  height: 60px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 10px;
+}
+
+.lane {
+  background: blanchedalmond;
+  width: 250px;
+  height: 900px;
+  margin: auto;
+  position: relative;
+  top: -320px;
+  z-index: -1;
+}
+
+/* pins falling */
+.fall {
+  animation-name: fall;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes fall {
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+/*others*/
+
+
+h1 {
+  text-align: center;
+  color: white
+}
+
+.page {
+  border: 1px;
+}
+
+
+nav ul li {
+  display: inline;
+}
+
+nav {
+  text-align: center;
+}
+
+.text {
+  background-color: rgb(76, 76, 76);
+  border-radius: 10px;
+}
+.text1 {
+  background-color: rgb(76, 76, 76);
+  border-radius: 10px;
+}
+
+p {
+  color: white;
+  padding: 10px;
+
+}
+
+/* responsive */
+@media (min-width:801px) {
+
+  body{
+    background-color: black;
+  }
+  button {
+    padding: 60px;
+    width: 33%
+  }
+  .text{
+    text-align: center;
+    color:white;
+  }
+}
+
+@media (max-width:800px) {
+
+  body {
+    background-color: rgb(42, 42, 165);
+    color: black
+  }
+
+  nav {
+    background-color: rgb(42, 42, 165);
+    float: left;
+    width: 25%;
+  }
+  button{
+    width:150px;
+    padding:13.65px;
+  }
+
+  .text1 {
+    float: left;
+    width: 75%;
+  }
+.text{
+  color:white;
+  text-align: center;
+}
+
+  nav ul li{margin:2em;} /*to space the items out */
+}

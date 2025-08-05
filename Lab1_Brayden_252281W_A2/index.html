@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 2 index</title>
+        <script src="main.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="gridcontainer">
+        <header class="img-container">
+            <img src="images/bowling_alley.jpg" height="300" width="100%" alt="bowling alley pic">
+            <h1 class="center-text">Bowling</h1>
+        </header>
+
+        <nav class="nav"> 
+            <ul>
+                <li><button id="page1btn">Introduction</button></li>
+                <li><button id="page2btn">History</button></li>
+                <li><button id="page3btn">Minigame</button></li>
+            </ul>
+        </nav>
+        <main>
+            
+            <!--page 1-->
+        <article class="page" id="page1">
+            <section class="text1">
+                <h1>Introduction About Bowling</h1>
+                <p>Bowling is a recreational activity that most commoonly involves rolling a bowling ball to knock down objects to score points.</p>
+                <p>There are actually many types of bowling with the one we are most familiar with being pin bowling where players have to knock down a total of 10 pins in 10 rounds</p>
+                <p>In pin bowling, specifically tenpin bowling, players would roll their bowling ball on a smooth surface called a lane to knock down the 10 pins </p>
+                <p>Players are given 2 chances/rolls to knock down all the pins on each turn.</p>
+                <p>Players would recieve a Strike when they knock down all 10 pins with a single ball, or a spare when they knock down all 10 pins with 2 balls</p>
+                <p>Bowling is played by over 120 million people in more than 90 countries, including 70 million people in the United States alone.</p>
+                <h1>Pin Bowling</h1>
+                <p>There are many variations of pin bowling, such as:</p>
+            </section>
+            <section>
+            <div class="cardcontainer">
+                <div class="card">
+                    <div class="cardinner">
+                        <div class="card-front">
+                            <h2>Tenpin Bowling</h2>
+                        </div>
+                        <div class="card-back">
+                            <h2>with large and heavy pins and bowled using a ball with 3 finger holes.</h2>
+                            <img src="images/tenpin.png" alt="tenpin img">
+                        </div>
+
+                    </div>
+
+                    <div class="cardinner">
+                        <div class="card-front">
+                            <h2>Duckpin bowling</h2>
+                        </div>
+                        <div class="card-back">
+                            <h2>being similar to tenpin bowling but with shorter pins and bowled with a smaller ball.</h2>
+                            <img src="images/duckpin.png" alt="duckpin img">
+                        </div>
+
+                    </div>
+
+                    <div class="cardinner">
+                        <div class="card-front">
+                            <h2>Candlepin bowling</h2>
+                        </div>
+                        <div class="card-back">
+                            <h2>having the tallest pins bowled with the smallest and lightest ball and are the onlt form where pins are not removed after each roll.</h2>
+                            <img src="images/candlepin.png" alt="candlepin img">
+                        </div>    
+               
+                    </div>  
+                </div>                     
+            </div>
+            </section>
+            <section class="text">
+                <h1 >Target Bowling</h1>                
+                <p>Target Bowling is usually played outdoors on specially prepared lawn like golf, players can either roll or throw the ball 
+                     to land the ball closest to the designated point or target within the bowling arena.</p>   
+                <p>Here is an image of people playing target bowling</p>
+                <img src="images/target-bowling.jpg" alt="target bowling img">
+            </section>
+            <p><b>All images were taken from wikipedia</b></p>
+        </article>
+
+            <!--page 2-->
+            <article class="page" id="page2">
+                <section class="text1">
+                    <h1 >A Brief History of Bowling</h1>
+                    <p>The earliest known forms of bowling date back to ancient Egypt, 
+                    with wall drawings depicting bowling being found in a royal Egyptian tomb dated to 3200 BCE.</p>
+                    <p>Balls were made using the husks of grains, covered in a material such as leather, 
+                        and bound with string. Other balls made of porcelain were also found.</p>
+                    <p>A similar game evolved between Roman legionaries, about 2000 yers ago, entailing the tossing of stone objects as 
+                        close as possible to other stone objects, which eventually evolved into outdoor bowling.</p>
+                    <p>In 1299, the oldest-surviving known bowling green for target style bowling was built: Master's Close, in Southampton, England, which is still in use.</p>   
+                    <p>In 1511, King Henry VII banned bowling for the lower classes and limited the use of private lanes to the wealthy.</p>
+                    <p>In 1848, the Scottish Bowling Association for lawn bowling was founded</p>
+                    <p>n 1875, the National Bowling Association (NBA) was founded by 27 local clubs in NYC to standardize rules for tenpin bowling but was later superseded in 1895
+                        due to failure to agreeing on other rules</p>
+                    <p>On 9 September 1895, the modern standardized rules for tenpin bowling were established by the American Bowling Congress (ABC)</p>
+                    <p>In the early 1890s, Duckpin bowling was invented in Boston, Massachusetts</p>
+                </section>
+            </article>
+            <!--page 3-->
+            <section class="page" id="page3">
+                <div class="text">
+                    <h1>Try out this Bowling Minigame!</h1>
+                    <h2>Use your cursor to drag the ball backwards and let go to roll it.</h2>
+                    <h2>Aim the red guidance line to the pins and try to knock them down!</h2>
+                </div>
+                <div class="game">
+                    <div class="row">
+                        <div class="pin">10</div>
+                        <div class="pin">9</div>
+                        <div class="pin">8</div>
+                        <div class="pin">7</div>
+                    </div>
+                    <div class="row">
+                        <div class="pin">6</div>
+                        <div class="pin">5</div>
+                        <div class="pin">4</div>
+                    </div>
+                    <div class="row">
+                        <div class="pin">3</div>
+                        <div class="pin">2</div>
+                    </div>
+                    <div class="row">
+                        <div class="pin">1</div>
+                    </div>
+                    
+                    <div class="lane"></div>
+                    <div class="ball" id="ball"></div>
+                    <div class="Guide" id="guide"></div>
+                </div>
+            </section>
+        </main>
+    </body>
+
+
+
+</html>
